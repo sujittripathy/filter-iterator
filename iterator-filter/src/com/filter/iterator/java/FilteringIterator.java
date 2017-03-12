@@ -20,12 +20,11 @@ public class FilteringIterator<E> {
 	
 	public ListIterator<E> filteredIterator(){
 		while(iterator.hasNext()){
-			Object a = iterator.next();
-			if(iObject.test(a)){
+			Object obj = iterator.next();
+			if(iObject.test(obj)){
 				iterator.remove();
 			}
 		}
 		return iterator;
 	}
-
 }
